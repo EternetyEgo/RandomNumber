@@ -1,0 +1,277 @@
+* {
+  font-family: monospace;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background: #171717;
+}
+
+/* blur  */
+.left {
+  background: #7245ac;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-filter: blur(160px);
+  z-index: 1;
+}
+
+.right {
+  background: #1d2f66;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-filter: blur(160px);
+  z-index: 1;
+}
+
+/* object  */
+.success {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 7px;
+  border: 1px solid green;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 7px;
+  border: 1px solid red;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  color: blwhiteimportant;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  width: 150px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: green;
+}
+.btn1 {
+  color: white !important;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  width: 150px;
+  font-size: 18px;
+  background-color: red;
+  cursor: not-allowed;
+}
+
+/* hero  */
+.childParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 990;
+}
+
+.title {
+  font-size: 45px;
+  text-align: center;
+  user-select: none;
+}
+
+.text {
+  width: 70% !important;
+  text-align: center;
+}
+
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 7px;
+  border: 1px solid green;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card1 {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 7px;
+  border: 1px solid red;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.historyCard {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+.CardBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 120px;
+}
+button {
+  margin-top: 20px !important;
+}
+
+/* sidebar  */
+.sidebar {
+  background: rgba(1, 1, 1, 0.1);
+  height: 280px;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  z-index: 999;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+  padding-top: 30px;
+}
+.sidebar:hover {
+  height: 35vh !important;
+}
+.sidebarCard,
+.sidebarCard1 {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  width: 100%;
+  padding: 20px;
+}
+
+
+/* modal  */
+.modal{
+  background: rgba(1, 1, 1, 0.9);
+  width: 500px;
+  height: 100%;
+  display: none;
+  left: 0;
+  flex-direction: column;
+  text-align: start;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 18px;
+  z-index: 999;
+}
+
+
+/* media  */
+@media (max-width: 700px) {
+  .right {
+    display: none;
+  }
+  .cardParent {
+    gap: 10px !important;
+  }
+  .card,
+  .card1,
+  .success,
+  .error {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  .btn,
+  .btn1,
+  .btnSuccess,
+  .btnError {
+    width: 100px !important;
+  }
+  .modal{
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .CardBtn {
+    padding-top: 0;
+  }
+  .left {
+    width: 60%;
+  }
+  .historyCard {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sidebar{
+    height: 130px;
+    background: rgba(1, 1, 1, 0.9);
+  }
+  .sidebar:hover {
+    height: 60vh !important;
+  }
+}
